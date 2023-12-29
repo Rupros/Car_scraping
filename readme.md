@@ -1,5 +1,9 @@
 # Car Listings Web Scraper
 
+## PROJECT INFORMATION
+
+I worked individually on the project. Since I am frequently checking for new car offers, I decided to create an autonomous bot, which would gather offers, in which I would be interested in.
+
 ## Overview
 
 This is a simple web scraper designed to gather car listings based on user-specified criteria. The scraper is written in Python and utilizes the selenium library for web scraping. It is intended to be a starting point for users who want to collect car listings from various websites for their specific interests.
