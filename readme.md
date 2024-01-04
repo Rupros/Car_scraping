@@ -1,58 +1,58 @@
-# Car Listings Web Scraper
+# Automašīnu sarakstu Tīmekļa skrāpis
 
-## PROJECT INFORMATION
+## PROJEKTA INFORMĀCIJA
 
-I worked individually on the project. Since I am frequently checking for new car offers, I decided to create an autonomous bot, which would gather offers, in which I would be interested in.
+Pie projekta strādāju individuāli. Tā kā bieži pārbaudu jaunu automašīnu piedāvājumus, nolēmu izveidot autonomu botu, kas apkopotu piedāvājumus, par kuriem es būtu ieinteresēts.
 
-## Overview
+## Pārskats
 
-This is a simple web scraper designed to gather car listings based on user-specified criteria. The scraper is written in Python and utilizes the selenium library for web scraping. It is intended to be a starting point for users who want to collect car listings from various websites for their specific interests.
+Šis ir vienkāršs tīmekļa skrāpis, kas paredzēts automašīnu sarakstu apkopošanai, pamatojoties uz lietotāja norādītiem kritērijiem. Skrāpis ir rakstīts Python un izmanto selēna bibliotēku tīmekļa skrāpēšanai. Tas ir paredzēts kā sākumpunkts lietotājiem, kuri vēlas apkopot automašīnu sarakstus no dažādām vietnēm savām īpašajām interesēm.
 
-Random time intervals are used in order to make it seem more human like
+Lai padarītu to cilvēciskāku, tiek izmantoti nejauši laika intervāli
 
-## Features
+## Iespējas
 
-- **Customizable Search Criteria:** Price | Mileage based on my needs | only looking for Audi
+- **Pielāgojami meklēšanas kritēriji:** Cena | Nobraukums, pamatojoties uz manām vajadzībām | meklēju tikai Audi | Pie dīlera, ļauju cenai būt augstākai, jo tur ir savs uzcenojums
   
-- **Multi-Website Support:** Checking websites in SS.LV and mollerauto.lv
+- **Vairāku vietņu atbalsts:** Vietņu pārbaude ss.lv un mollerauto.lv
 
-- **Data Output:** Saves links to cars that fit my criteria in a file
+- **Datu izvade:** failā saglabā saites uz automašīnām, kas atbilst maniem kritērijiem
 
-## Prerequisites
+## Priekšnoteikumi
 
-Make sure you have the following installed before running the scraper:
+Pirms skrāpja palaišanas pārliecinieties, vai ir instalēta šāda informācija:
 
 - Python 3.x
 - Selenium
 
-## DISCLAIMER
+## ATRUNA
 
-This web scraper is for educational purposes only. Using it frequently might cause the website to detect it as a bot. Countermeasures, such as randomized time between interactions were implemented. Selenium JS signiture is not hidden, because it depends on the machine it will be ran on. 
+Šis tīmekļa skrāpis ir paredzēts tikai izglītojošiem nolūkiem. Izmantojot to bieži, vietne var to noteikt kā robotu. Tika īstenoti pretpasākumi, piemēram, nejaušināts laiks starp mijiedarbībām. Selēna JS paraksts nav slēpts, jo tas ir atkarīgs no mašīnas, kurā tas tiks darbināts.
 
-### USED LIBRARIES
+### IZMANTOTAS BIBLIOTĒKAS
 
-## Selenium Integration
+## Selenium integrācija
 
-This web scraper utilizes the Selenium library for enhanced web scraping capabilities. Selenium is employed in scenarios where a website relies heavily on JavaScript, or when interactive elements on the webpage need to be manipulated for data retrieval.
+Šis tīmekļa skrāpis izmanto Selēna bibliotēku, lai uzlabotu tīmekļa skrāpēšanas iespējas. Selēns tiek izmantots gadījumos, kad vietne lielā mērā ir atkarīga no JavaScript vai kad datu izguvei ir jāmaina tīmekļa lapas interaktīvie elementi.
 
-### Selenium Components
+### Selenium sastāvdaļas
 
-- **WebDriver:** The `webdriver` class is the primary interface for interacting with web browsers. It allows the scraper to open a browser window, navigate to web pages, and interact with elements on the page.
+- **WebDriver:** Webdriver klase ir galvenā saskarne mijiedarbībai ar tīmekļa pārlūkprogrammām. Tas ļauj skrāpim atvērt pārlūkprogrammas logu, pārvietoties uz tīmekļa lapām un mijiedarboties ar lapas elementiem.
 
-- **Options:** The `Options` class, in conjunction with Firefox, enables the configuration of browser behavior. It is often used to set options such as running the browser in headless mode (without a visible UI).
+- **Options:** klase Opcijas kopā ar Firefox ļauj konfigurēt pārlūkprogrammas darbību. To bieži izmanto, lai iestatītu tādas opcijas kā pārlūkprogrammas palaišana bezgalvu režīmā (bez redzama lietotāja saskarnes).
 
-- **By:** The `By` class is utilized to locate HTML elements on a web page. It provides various mechanisms to find elements, such as by ID, name, class name, etc.
+- **By:** Klase "Pēc" tiek izmantota, lai tīmekļa lapā atrastu HTML elementus. Tas nodrošina dažādus mehānismus elementu atrašanai, piemēram, pēc ID, nosaukuma, klases nosaukuma utt.
 
-- **WebDriverWait:** The `WebDriverWait` class is employed to wait for a certain condition to occur before proceeding with the script execution. This synchronization ensures that the script progresses only when specific conditions are met.
+- **WebDriverWait:** klase "WebDriverWait" tiek izmantota, lai gaidītu, līdz iestājas noteikts nosacījums, pirms turpināt skripta izpildi. Šī sinhronizācija nodrošina, ka skripts turpinās tikai tad, ja ir izpildīti īpaši nosacījumi.
 
-- **expected_conditions:** This module provides predefined conditions that can be used with `WebDriverWait`. It allows waiting for specific events or states on a webpage.
+- **expected_conditions:** Šis modulis nodrošina iepriekš definētus nosacījumus, kurus var izmantot ar WebDriverWait. Tas ļauj gaidīt konkrētus notikumus vai stāvokļus tīmekļa lapā.
 
-- **TimeoutException:** The `TimeoutException` is raised when an operation times out, often used with `WebDriverWait` to handle situations where an expected condition is not met within a specified time.
+- **TimeoutException:** TimeoutException tiek palielināts, kad darbībai iestājas noildze. Bieži tiek izmantots kopā ar WebDriverWait, lai apstrādātu situācijas, kad noteiktā laikā netiek izpildīts paredzētais nosacījums.
 
-### Time and Random
+### Laiks un nejaušība
 
-In addition to Selenium, the script incorporates the following modules:
+Papildus Selenium skriptā ir iekļauti šādi moduļi:
 
-- **time:** The `time` module introduces delays in the script. Waiting for elements to load before interaction is common in web scraping, and `time.sleep()` provides a simple way to add delays.
+- **time:** modulis "laiks" ievieš skripta aizkavi. Elementu ielādes gaidīšana pirms mijiedarbības ir izplatīta tīmekļa skrāpēšanā, un “time.sleep()” nodrošina vienkāršu veidu, kā pievienot aizkaves.
 
-- **random:** The `random` module is used to introduce randomness in waiting times. This helps in avoiding detection by websites that may block or restrict access to automated scripts. Random waiting times make the scraping activity appear more like human behavior.
+- **random:** Nejaušības modulis tiek izmantots, lai ieviestu nejaušību gaidīšanas laikos. Tas palīdz izvairīties no vietņu atklāšanas, kas var bloķēt vai ierobežot piekļuvi automatizētiem skriptiem. Nejauši gaidīšanas laiki liek skrāpēšanai vairāk līdzināties cilvēka uzvedībai.
