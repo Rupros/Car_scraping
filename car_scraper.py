@@ -49,8 +49,8 @@ load_page()
 
 time.sleep(get_random_wait_time())
 
-# go to Audi
-driver.find_element(By.ID, "ahc_103").click()
+# go to Audi ( go to direct site, because the web page is changing currently and can be unpredictable)
+driver.get("https://www.ss.lv/lv/transport/cars/audi/")
 load_page()
 
 time.sleep(get_random_wait_time())
@@ -129,7 +129,7 @@ time.sleep(get_random_wait_time())
 WebDriverWait(driver, 10).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, ".GdprCookiesPopup-Allow.Button")))
 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".HomePage-Cards.HomePage-Section .pagebuilder-column-group > div:first-child a")))
 
-goToAudi = driver.find_element(By.CSS_SELECTOR, ".HomePage-Cards.HomePage-Section .pagebuilder-column-group > div:first-child a")
+goToAudi = driver.find_elements(By.CSS_SELECTOR, ".HomePage-Cards.HomePage-Section .pagebuilder-column-group > div:first-child a")[1]
 driver.execute_script("arguments[0].scrollIntoView();", goToAudi)
 time.sleep(get_random_wait_time())
 goToAudi.click()
