@@ -29,6 +29,8 @@ Pirms skrāpja palaišanas pārliecinieties, vai ir instalēta šāda informāci
 
 Šis tīmekļa skrāpis ir paredzēts tikai izglītojošiem nolūkiem. Izmantojot to bieži, vietne var to noteikt kā robotu. Tika īstenoti pretpasākumi, piemēram, nejaušināts laiks starp mijiedarbībām. Selēna JS paraksts nav slēpts, jo tas ir atkarīgs no mašīnas, kurā tas tiks darbināts.
 
+Projekts iespējams var nedarboties, ja mājaslapas tiek atjauninātas un neatbilst vairs iepriekšējai funkcionalitātei. SEKOT LĪDZI!
+
 ### IZMANTOTAS BIBLIOTĒKAS
 
 ## Selenium integrācija
